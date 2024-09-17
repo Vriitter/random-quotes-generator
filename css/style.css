@@ -13,11 +13,11 @@ body {
    background: chocolate;
 }
 
-button:hover {
+.btm button:hover {
    background: #3c3c3c;
 }
 
-button:active {
+.btn button:active {
    background: #6f6f6f;
 }
 
@@ -87,3 +87,7 @@ h1 {
    padding: 10px 0;
 }
 
+.active {
+   background: #fff;
+   color: #262626;
+}

@@ -41,8 +41,6 @@ function showRandomtext() {
         const randomQuote = quotes[randomIndex];
         quote.innerHTML = randomQuote.text;
         writer.innerHTML = randomQuote.author;
-    } else {
-        text.innerHTML = 'Цитаты не загружены.';
     }
 }
 
@@ -51,13 +49,15 @@ btn.addEventListener('click', showRandomtext);
 langRuButton.addEventListener('click', () => {
     currentLanguage = 'ru';
     loadQuotesRU();
+    langRuButton.classList.add('active');
+    langEnButton.classList.remove('active');
 });
 
 langEnButton.addEventListener('click', () => {
     currentLanguage = 'en';
     loadQuotesEN();
+    langEnButton.classList.add('active');
+    langRuButton.classList.remove('active');
 });
 
 loadQuotesRU();
-
-
