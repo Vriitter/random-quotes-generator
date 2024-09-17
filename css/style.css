@@ -13,9 +13,36 @@ body {
    background: chocolate;
 }
 
+button:hover {
+   background: #3c3c3c;
+}
+
+button:active {
+   background: #6f6f6f;
+}
+
 .container {
    width: 550px;
    height: 450px;
+}
+
+.language {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   gap: 30px;
+   margin-bottom: 20px;
+}
+
+button {
+   padding: 12px 24px;
+   border-radius: 5px;
+   border: none;
+   font-size: 16px;
+   background: #262626;
+   color: #fff;
+   outline: none;
+   cursor: pointer;
 }
 
 .header {
@@ -60,18 +87,3 @@ h1 {
    padding: 10px 0;
 }
 
-
-.btn button {
-   padding: 12px 15px;
-   border-radius: 5px;
-   border: none;
-   font-size: 16px;
-   background: #262626;
-   color: #fff;
-   outline: none;
-   cursor: pointer;
-}
-
-.btn button:active {
-   opacity: 0.7;
-}

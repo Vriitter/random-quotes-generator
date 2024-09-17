@@ -1,1 +1,1 @@
-# random-quotes-generator
+# random-texts-generator
