@@ -30,7 +30,7 @@ h1 {
 
 .main-content {
    width: 100%;
-   height: 300px;
+   height: auto;
    padding: 50px 40px;
    border-radius: 15px;
    background: #fff;
