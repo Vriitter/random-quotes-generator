@@ -91,3 +91,16 @@ h1 {
    background: #fff;
    color: #262626;
 }
+
+.fade-out {
+   animation: fade-out 0.5s ease-out forwards;
+ }
+ 
+ @keyframes fade-out {
+   0% {
+     opacity: 1;
+   }
+   100% {
+     opacity: 0;
+   }
+ }

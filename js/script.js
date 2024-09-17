@@ -39,6 +39,15 @@ function showRandomtext() {
     if (quotes.length > 0) {
         const randomIndex = Math.floor(Math.random() * quotes.length);
         const randomQuote = quotes[randomIndex];
+         // Анимировать смену текста цитаты
+         quote.classList.add('fade-out');
+         writer.classList.add('fade-out');
+ 
+         setTimeout(() => {
+             quote.classList.remove('fade-out');
+             writer.classList.remove('fade-out');
+         }, 500);
+
         quote.innerHTML = randomQuote.text;
         writer.innerHTML = randomQuote.author;
     }
@@ -56,6 +65,7 @@ langRuButton.addEventListener('click', () => {
 langEnButton.addEventListener('click', () => {
     currentLanguage = 'en';
     loadQuotesEN();
+
     langEnButton.classList.add('active');
     langRuButton.classList.remove('active');
 });
