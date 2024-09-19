@@ -12,6 +12,7 @@ function loadQuotesRU() {
         .then(response => response.json())
         .then(data => {
             quotes = data;
+            btn.innerHTML = 'Найти цитату';
             showRandomtext();
         })
         .catch(error => {
