@@ -10,7 +10,7 @@ body {
    align-items: center;
    justify-content: center;
    height: 100vh;
-   background: chocolate;
+   background: rgb(75, 115, 216);
 }
 
 .btm button:hover {
@@ -77,7 +77,7 @@ h1 {
    text-align: center;
    text-transform: uppercase;
    letter-spacing: 5px;
-   color: red;
+   color: rgb(233, 80, 154);
 }
 
 .button-area {
@@ -104,3 +104,10 @@ h1 {
      opacity: 0;
    }
  }
+
+@media (max-width: 549px) {
+   .container {
+      width: 100%;
+      padding: 0 10px;
+   }
+}
