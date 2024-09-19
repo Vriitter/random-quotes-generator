@@ -15,7 +15,7 @@ function loadQuotesRU() {
             showRandomtext();
         })
         .catch(error => {
-            console.error('Ошибка загрузки русских цитат:', error);
+            console.error('Ошибка загрузки русских цитат.', error);
             quote.innerHTML = 'Не удалось загрузить русские цитаты.';
             writer.innerHTML = 'Не удалось загрузить';
         });
@@ -26,20 +26,21 @@ function loadQuotesEN() {
         .then(response => response.json())
         .then(data => {
             quotes = data;
+            btn.innerHTML = 'Find quote';
             showRandomtext();
         })
         .catch(error => {
-            console.error('Ошибка загрузки английских цитат:', error);
-            quote.innerHTML = 'Не удалось загрузить английские цитаты.';
-            writer.innerHTML = 'Не удалось загрузить';
+            console.error('Failed to load English quotes', error);
+            quote.innerHTML = 'Failed to load English quotes.';
+            writer.innerHTML = 'Failed to load';
         });
 }
+
 
 function showRandomtext() {
     if (quotes.length > 0) {
         const randomIndex = Math.floor(Math.random() * quotes.length);
         const randomQuote = quotes[randomIndex];
-         // Анимировать смену текста цитаты
          quote.classList.add('fade-out');
          writer.classList.add('fade-out');
  
